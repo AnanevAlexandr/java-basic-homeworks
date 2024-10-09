@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class HomeWork3 {
     public static void main(String[] args) {
 
-        int[][] array = {{1, 2, 3, 5, 4, 8}, {4, 5, 8, 9, 7, 5}};
+        int[][] array = {{1, 2, 3, 5, 4, 8}, {1, 2, 3, 4, 5, 6}};
         char[][] array2 = new char[7][7];
         int[][] arrayDiagonal = new int[5][5];
 
@@ -90,7 +90,7 @@ public class HomeWork3 {
     если второй строки не существует, то в качестве результата необходимо вернуть -1*/
     public static int sumSecondString(int[][] arr) {
         int sum = 0;
-        if (arr[1].length >= 1) {
+        if (arr[1].length > 0) {
             for (int i = 0; i < arr[1].length; i++) {
                 sum += arr[1][i];
             }
