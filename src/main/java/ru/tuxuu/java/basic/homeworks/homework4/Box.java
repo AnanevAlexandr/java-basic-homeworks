@@ -49,14 +49,10 @@ public class Box {
     }
 
     public void open(boolean isOpen) {
-        if (isOpen) {
-            this.isOpen=isOpen;
-            System.out.println("Коробка открыта");
-        } else {
-            System.out.println("Коробка закрыта!");
-            this.isOpen=isOpen;
-        }
+        this.isOpen = isOpen;
+        System.out.println(isOpen ? "Коробка открыта" : "Коробка закрыта");
     }
+
 
     public void input() {
         if (!isOpen) {

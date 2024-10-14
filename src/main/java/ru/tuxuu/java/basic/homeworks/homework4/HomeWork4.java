@@ -16,13 +16,12 @@ public class HomeWork4 {
         user[9] = new User("Котов", "Вадим", "Анатольевич", 1971, "kotov@mail.ru");
 
 
-        for (int i = 0; i < user.length; i++) {
-            if (2024 - user[i].getYearOfBirth() > 40) {
-                System.out.println(user[i].getSurname() + " " + user[i].getName() +
-                        " " + user[i].getPatronymic() + " " + user[i].getYearOfBirth() +
-                        " " + user[i].getEmail());
+        for (User u : user) {
+            if (2024 - u.getYearOfBirth() > 40) {
+                u.info();
             }
         }
+
 
         System.out.println();
         System.out.println();
