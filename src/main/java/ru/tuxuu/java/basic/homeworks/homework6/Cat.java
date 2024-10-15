@@ -5,20 +5,17 @@ public class Cat {
     private int appetit;
     private boolean isHungry;
 
-    public boolean isHungry() {
-        return isHungry=true;
-    }
 
     public Cat(String name, int appetit) {
         this.name = name;
         this.appetit = appetit;
-        this.isHungry = isHungry();
+        this.isHungry = true;
     }
 
     public void eat(Plate plate) {
-        if (isHungry()) {
-            if (plate.amountOfFood(plate.getNowFood() - appetit)) {
-                plate.setNowFood(plate.getNowFood() - appetit);
+        if (isHungry) {
+            if (plate.decreaseFood(appetit)) {
+                plate.setNowFood(plate.getNowFood()-appetit);
                 isHungry = false;
                 System.out.println(name + " поел, остаток в тарелке " + plate.getNowFood());
             } else {

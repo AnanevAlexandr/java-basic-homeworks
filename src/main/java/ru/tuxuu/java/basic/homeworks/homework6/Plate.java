@@ -4,8 +4,6 @@ public class Plate {
     private int maxFood;
     private int nowFood;
 
-    private boolean isChangingFood;
-
     public void setNowFood(int nowFood) {
         this.nowFood = nowFood;
     }
@@ -30,12 +28,10 @@ public class Plate {
         System.out.println("Количество еды в тарелке: " + nowFood);
     }
 
-    public boolean amountOfFood(int changingFood) {
-        if (changingFood >= 0) {
-            this.isChangingFood = true;
+    public boolean decreaseFood(int amount) {
+        if (nowFood - amount >= 0) {
             return true;
         }
-        this.isChangingFood = false;
         return false;
     }
 }
