@@ -34,4 +34,7 @@ public class Plate {
         }
         return false;
     }
+    public void decreasesFood(int amount){
+        nowFood-=amount;
+    }
 }
