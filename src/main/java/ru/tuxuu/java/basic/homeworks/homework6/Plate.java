@@ -30,11 +30,9 @@ public class Plate {
 
     public boolean decreaseFood(int amount) {
         if (nowFood - amount >= 0) {
+            setNowFood(nowFood - amount);
             return true;
         }
         return false;
-    }
-    public void decreasesFood(int amount){
-        nowFood-=amount;
     }
 }
