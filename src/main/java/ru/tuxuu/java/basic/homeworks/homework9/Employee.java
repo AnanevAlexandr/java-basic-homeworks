@@ -57,18 +57,14 @@ public class Employee {
         return false;
     }
 
-    public static List<Employee> yangEmployee(ArrayList<Employee> list) {
-        List<Employee> yang = new ArrayList<>();
-        int minAge = list.get(0).getAge();
-        int index = 0;
-        for (int i = 0; i < list.size(); i++) {
-            if (minAge >= list.get(i).getAge()) {
-                index = i;
+    public static Employee yangEmployee(ArrayList<Employee> list) {
+        Employee yang = list.get(0);
+        for (Employee emp : list) {
+            if (emp.getAge() < yang.getAge()) {
+                yang = emp;
             }
         }
-        System.out.println("Имя и возраст самого молодого сотрудника: " +
-                list.get(index).getName() + " " + list.get(index).getAge());
-        yang.add(list.get(index));
+        System.out.println("Самый молодой сотрудник: " + yang.getName() + ". Его возраст: " + yang.getAge());
         return yang;
     }
 }
