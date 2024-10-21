@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class PhoneBook {
 
-    protected Map<String, List<String>> contact;
+    private Map<String, List<String>> contact;
 
     @Override
     public String toString() {
