@@ -32,13 +32,9 @@ public class FileUtils {
     }
 
     public static void writeInFile(String text, String path)  {
-        try (OutputStreamWriter out = new OutputStreamWriter(
-                new BufferedOutputStream(
-                        new FileOutputStream(path, true)))) {
+        try (FileOutputStream out = new FileOutputStream(path, true)) {
             byte[] buffer = text.getBytes(StandardCharsets.UTF_8);
-            for (int i = 0; i < buffer.length; i++) {
-                out.write(buffer[i]);
-            }
+            out.write(buffer);
         } catch (IOException e) {
             e.printStackTrace();
         }
